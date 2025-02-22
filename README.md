@@ -39,14 +39,13 @@ Prerequisites:
 - Python 3.7+ and pip (or conda)
 
 Steps:
-1. Clone the repository:
-   git clone https://github.com/YourUsername/bank-churn-app.git
+1. Clone the repository
 
 2. Backend Setup:
    cd backend
    pip install -r requirements.txt
    uvicorn main:app --reload
-   # FastAPI will run on http://127.0.0.1:8000
+   # FastAPI will run on http://localhost:8000
 
 3. Frontend Setup:
    cd ../frontend/my-react-app
