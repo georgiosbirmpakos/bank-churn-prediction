@@ -165,14 +165,14 @@ The React app will run on [http://localhost:3000](http://localhost:3000).
 
 ## Screenshots
 
-### 1. Home Page
-![Home Page](./screenshots/home.png "Home Page")
+### 1. About Page
+![About Page](./screenshots/about.JPG "About Page")
 
-### 2. Predictions Page
-![Predictions Page](./screenshots/predictions.png "Predictions Page")
+### 2. Analytics Page
+![Home Page](./screenshots/home.JPG "Home Page")
 
-### 3. About Page
-![About Page](./screenshots/about.png "About Page")
+### 3. Predictions Page
+![Predictions Page](./screenshots/predictions.JPG "Predictions Page")
 
 ---
 
