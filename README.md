@@ -69,4 +69,4 @@ The dataset typically includes:
 ---
 
 ## Project Structure
-bank-churn-app/ ├── backend/ │ ├── main.py # FastAPI entry point │ └── model.pkl # Pre-trained model (example) ├── frontend/ │ ├── my-react-app/ │ │ ├── public/ │ │ │ ├── sources/ │ │ │ │ ├── test1.html │ │ │ │ ├── test2.html │ │ │ │ └── ... │ │ ├── src/ │ │ │ ├── App.js │ │ │ ├── App.css │ │ │ └── ... │ │ ├── package.json │ │ └── ... └── README.md
+
