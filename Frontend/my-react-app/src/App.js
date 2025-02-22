@@ -330,23 +330,23 @@ function App() {
         </div>
         <nav className="menu">
           <ul>
+          <li
+              className={activePage === 'about' ? 'active' : ''}
+              onClick={() => setActivePage('about')}
+            >
+              Home
+            </li>
             <li
               className={activePage === 'presentation' ? 'active' : ''}
               onClick={() => setActivePage('presentation')}
             >
-              Home
+              Analytics
             </li>
             <li
               className={activePage === 'predictions' ? 'active' : ''}
               onClick={() => setActivePage('predictions')}
             >
               Predictions
-            </li>
-            <li
-              className={activePage === 'about' ? 'active' : ''}
-              onClick={() => setActivePage('about')}
-            >
-              About
             </li>
           </ul>
         </nav>
