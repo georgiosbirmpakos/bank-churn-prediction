@@ -69,22 +69,4 @@ The dataset typically includes:
 ---
 
 ## Project Structure
-bank-churn-app/
-├── backend/
-│   ├── main.py             # FastAPI entry point
-│   └── model.pkl           # Pre-trained model (example)
-├── frontend/
-│   ├── my-react-app/
-│   │   ├── public/
-│   │   │   ├── sources/
-│   │   │   │   ├── test1.html
-│   │   │   │   ├── test2.html
-│   │   │   │   └── ...
-│   │   ├── src/
-│   │   │   ├── App.js       # Main React file (includes Presentation, Predictions, About)
-│   │   │   ├── App.css      # Netflix-inspired styling
-│   │   │   └── ...
-│   │   ├── package.json
-│   │   └── ...
-└── README.md               # Project documentation
 
