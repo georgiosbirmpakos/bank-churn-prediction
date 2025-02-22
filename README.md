@@ -163,5 +163,18 @@ The React app will run on [http://localhost:3000](http://localhost:3000).
 
 ---
 
+## Screenshots
+
+### 1. Home Page
+![Home Page](./screenshots/home.png "Home Page")
+
+### 2. Predictions Page
+![Predictions Page](./screenshots/predictions.png "Predictions Page")
+
+### 3. About Page
+![About Page](./screenshots/about.png "About Page")
+
+---
+
 **Enjoy Predicting with Churnflix!**
 ```
