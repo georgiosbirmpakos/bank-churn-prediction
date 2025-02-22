@@ -1,4 +1,3 @@
-```markdown
 # 🚀 Bank Churn Prediction
 
 ## 📌 Overview
