@@ -52,23 +52,56 @@ function Presentation() {
 
 function About() {
   return (
-    <div className="content">
-      <h2>About the Bank Churn Prediction App</h2>
-      <p>
-        This application is designed to predict customer churn for a bank by
-        analyzing customer data using machine learning techniques.
-      </p>
-      <p>
-        The presentation page displays various HTML reports and visualizations
-        related to the customer churn analysis. It serves as an educational tool
-        to demonstrate data preprocessing, predictive modeling, and insights
-        into customer behavior.
-      </p>
-      <p>
-        Whether you're a data scientist or a business analyst, this app offers a
-        hands-on look at how data can drive strategic decisions in the banking
-        industry.
-      </p>
+    <div className="content about-container">
+      <h2>About Churnflix</h2>
+      
+      <div className="hero-section">
+        <img
+          src="/images/bank-churn-hero.jpg"
+          alt="Bank Churn Hero"
+          className="hero-image"
+        />
+        <div className="hero-overlay">
+          <p>
+            Churnflix is a bank churn prediction app that uses advanced machine
+            learning algorithms to help identify which customers are likely to
+            leave your bank. With Churnflix, you can stay ahead of customer
+            churn, optimize your retention strategy, and enhance customer
+            satisfaction.
+          </p>
+        </div>
+      </div>
+      
+      <div className="info-cards">
+        <div className="card">
+          <h3>What is Churn?</h3>
+          <p>
+            Churn is the phenomenon where customers end their relationship with
+            a company. In the banking sector, churn often means customers
+            closing their accounts or moving their deposits elsewhere.
+          </p>
+        </div>
+        
+        <div className="card">
+          <h3>Why It Matters</h3>
+          <p>
+            Reducing churn is a top priority for banks, as acquiring new
+            customers is usually more expensive than retaining existing ones. By
+            understanding churn, banks can focus on loyalty programs, targeted
+            marketing, and improved customer service.
+          </p>
+        </div>
+        
+        <div className="card">
+          <h3>How Churnflix Helps</h3>
+          <p>
+            Churnflix leverages machine learning models to analyze key customer
+            data like credit scores, transaction patterns, and demographics.
+            This allows you to predict churn in real-time, giving you the
+            insights needed to act before customers decide to leave.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -106,16 +139,16 @@ function Predictions() {
 
     // Convert numeric fields and adjust boolean fields
     const payload = {
-      creditScore: Number(formData.creditScore),
-      geography: formData.geography,
-      gender: formData.gender,
-      age: Number(formData.age),
-      tenure: Number(formData.tenure),
-      balance: Number(formData.balance),
-      numOfProducts: Number(formData.numOfProducts),
-      hasCrCard: formData.hasCrCard ? 1 : 0,
-      isActiveMember: formData.isActiveMember ? 1 : 0,
-      estimatedSalary: Number(formData.estimatedSalary)
+      CreditScore: Number(formData.creditScore),
+      Geography: formData.geography,
+      Gender: formData.gender,
+      Age: Number(formData.age),
+      Tenure: Number(formData.tenure),
+      Balance: Number(formData.balance),
+      NumOfProducts: Number(formData.numOfProducts),
+      HasCrCard: formData.hasCrCard ? 1 : 0,
+      IsActiveMember: formData.isActiveMember ? 1 : 0,
+      EstimatedSalary: Number(formData.estimatedSalary)
     };
 
     try {
@@ -274,7 +307,7 @@ function Predictions() {
 
 
 function App() {
-  const [activePage, setActivePage] = useState('presentation'); // 'presentation', 'predictions', or 'about'
+  const [activePage, setActivePage] = useState('presentation'); 
 
   const renderPage = () => {
     if (activePage === 'presentation') return <Presentation />;
