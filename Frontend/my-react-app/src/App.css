@@ -5,10 +5,13 @@
   padding: 0;
 }
 
-body, html, #root {
+body,
+html,
+#root {
   height: 100%;
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
 }
 
 /* Layout container */
@@ -20,16 +23,16 @@ body, html, #root {
 /* Sidebar styling */
 .sidebar {
   width: 250px;
-  background: #4a90e2;
-  color: #fff;
+  background-color: #181818;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.sidebar h1 {
+.logo h1 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #e50914;
 }
 
 .menu ul {
@@ -38,19 +41,20 @@ body, html, #root {
 }
 
 .menu li {
-  padding: 10px 15px;
+  padding: 12px 20px;
   margin-bottom: 10px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: background-color 0.3s;
 }
 
 .menu li:hover {
-  background: #357ABD;
+  background-color: #333;
 }
 
 .menu li.active {
-  background: #357ABD;
+  background-color: #e50914;
 }
 
 /* Main content styling */
@@ -58,21 +62,22 @@ body, html, #root {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+  background-color: #141414;
 }
 
 /* Content container for pages */
 .content {
-  background: #fff;
+  background-color: #222;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Viewer and iframe styles */
+/* Viewer and iframe styles for Presentation page */
 .viewer {
   margin-bottom: 20px;
-  border: 2px solid #4a90e2;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2px solid #e50914;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .iframe-viewer {
@@ -81,7 +86,7 @@ body, html, #root {
   border: none;
 }
 
-/* Controls styling */
+/* Controls styling for Presentation page */
 .controls {
   display: flex;
   justify-content: space-between;
@@ -89,21 +94,139 @@ body, html, #root {
 }
 
 .control-button {
-  background: #4a90e2;
+  background-color: #e50914;
   color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .control-button:hover {
-  background: #357ABD;
+  background-color: #b81d24;
 }
 
 .file-info {
   font-size: 18px;
-  color: #333;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.file-index {
+  margin-left: 8px;
+  opacity: 0.7;
+}
+
+/* Center the form in a card-like container */
+.prediction-form-container {
+  width: 50%;               /* Half the container width */
+  margin: 20px auto;        /* Centered and spaced from top */
+  background-color: #333;   /* Dark card background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+/* Two-column layout for the form fields */
+.prediction-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Two equal columns */
+  gap: 20px;
+}
+
+/* Each label/input pair stacks vertically */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Checkboxes remain horizontally aligned with label */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Make the button row span both columns for centering */
+.form-actions {
+  grid-column: 1 / 3;         /* Spans columns 1 through 2 */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Input and select styling */
+.form-group input,
+.form-group select {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #e50914;      /* Netflix red highlight */
+}
+
+
+
+/* Error and prediction result styling */
+.error-message {
+  color: #e50914;
+  margin-top: 10px;
+}
+
+.prediction-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Button hover/focus effects for a more interactive feel */
+.control-button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.control-button:hover {
+  background-color: #b81d24;
+  transform: scale(1.05);
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-message {
+  color: #e50914;
+  margin-top: 10px;
+}
+
+.prediction-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 4px;
 }
