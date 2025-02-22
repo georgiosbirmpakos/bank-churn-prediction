@@ -8,21 +8,6 @@ A Netflix-inspired single-page application that predicts whether a bank customer
 
 The backend is powered by **FastAPI**, which provides a `/predict` endpoint. When a user submits the prediction form, the data is sent to the backend for inference using a pre-trained model.
 
----
-
-## Table of Contents
-
-- [Features](#features)  
-- [Business Logic](#business-logic)  
-- [Tech Stack](#tech-stack)  
-- [Project Structure](#project-structure)  
-- [Getting Started](#getting-started)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)
-
----
-
 ## Features
 
 - **Netflix-Inspired UI:** A sleek, dark-themed interface with a sidebar menu.  
