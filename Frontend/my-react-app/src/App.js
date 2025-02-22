@@ -3,10 +3,16 @@ import './App.css';
 
 // Files for the Presentation page
 const files = [
-  { name: 'Example 1', path: '/sources/test1.html' },
-  { name: 'Example 2', path: '/sources/test2.html' },
-  { name: 'Example 3', path: '/sources/test3.html' },
-  { name: 'Example 4', path: '/sources/test4.html' }
+  { name: '1', path: '/sources/grafima_ypoloipo_ana_xwra_exited.html' },
+  { name: '2', path: '/sources/grafima_pelates_pososto.html' },
+  { name: '3', path: '/sources/grafima_pelates_anaxwra.html' },
+  { name: '4', path: '/sources/grafima_pelates.html' },
+  { name: '5', path: '/sources/grafima_misthos_exited.html' },
+  { name: '6', path: '/sources/grafima_hlikia_emeinan.html' },
+  { name: '7', path: '/sources/grafima_hlikia_efygan.html' },
+  { name: '8', path: '/sources/grafima_gender_pososto.html' },
+  { name: '9', path: '/sources/grafima_gender_exited.html' },
+  { name: '10', path: '/sources/correlation_matrix_plotly.html' }
 ];
 
 function Presentation() {
