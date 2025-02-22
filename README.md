@@ -85,3 +85,41 @@ B) FastAPI Backend
      mapped to a pydantic BaseModel (CustomerData).
    - Loads a pre-trained model (model.pkl) using joblib.
    - Returns a JSON response: {"will_exit": true/false}
+
+🔧 Running Locally (for Development & Testing)
+Note: If you’re not using Docker, skip to Step 2 and Step 3 for running FastAPI and React locally.
+
+1️⃣ (Optional) Using Docker & Docker Compose
+docker ps
+
+2️⃣ Start FastAPI Backend (Standalone)
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+3️⃣ Start React Frontend (Standalone)
+cd frontend/my-react-app
+npm install
+npm start
+
+The React app will run on http://localhost:3000.
+
+🔹 Testing the Predictions
+Navigate to the Predictions page in the React app (click “Predictions” in the sidebar).
+Fill in the form with customer data (e.g., credit score, balance, etc.).
+Click Predict. The app sends a POST request to the FastAPI endpoint POST /predict.
+The FastAPI server returns a JSON response like:
+
+{
+  "will_exit": true
+}
+
+🔄 How It Works
+FastAPI loads a pre-trained scikit-learn model (model.pkl).
+The React app collects user input (credit score, age, etc.) and sends it to the FastAPI /predict endpoint.
+FastAPI transforms the input into the required format, calls model.predict(...), and returns a JSON response indicating whether the user is likely to churn.
+
+🚀 Future Enhancements
+Integrate with a real database (e.g., Postgres, MySQL) for storing customer data.
+Add user authentication and a dedicated admin dashboard.
+Expand the model with additional features (transaction history, product usage, etc.).
