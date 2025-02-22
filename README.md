@@ -62,11 +62,119 @@ The dataset typically includes:
 ## Tech Stack
 
 - **Frontend:** React (JavaScript) with a Netflix-inspired design  
-- **Backend:** FastAPI (Python)  
-- **Styling:** Custom CSS, focusing on a dark theme and grid/flex layouts  
-- **Build Tool:** Create React App (for frontend)
+- **Backend:** FastAPI (Pytho===========================
+Churnflix: Bank Churn App
+===========================
 
----
+A Netflix-inspired single-page application (SPA) that predicts whether a bank customer will leave (churn).
+The frontend is built with React, while the backend uses FastAPI to serve a machine learning model.
 
-## Project Structure
+-----------------------------------------------------------
+TABLE OF CONTENTS
+-----------------------------------------------------------
+1. Features
+2. Project Structure
+3. Installation & Setup
+4. Usage
+5. Technical Details
+   - React Frontend
+   - FastAPI Backend
+   - Model Compatibility & Versioning
+6. Screenshots (Optional)
+7. Contributing
+8. License
+9. Contact
 
+-----------------------------------------------------------
+1. FEATURES
+-----------------------------------------------------------
+- Netflix-Themed UI
+  * A dark-themed interface with a sidebar menu, red accents, and hover/focus effects.
+- Three Main Pages:
+  1) Home (Presentation)
+     - Displays local HTML reports/visualizations in an auto-resizing iframe.
+     - "Previous" and "Next" buttons let you cycle through multiple HTML files.
+  2) Predictions
+     - A form that collects customer data (e.g., Credit Score, Balance).
+     - Sends a POST request to a FastAPI endpoint to get a "will_exit" prediction (true/false).
+  3) About
+     - Features a hero image overlay and info cards explaining bank churn and how the app addresses it.
+
+-----------------------------------------------------------
+2. PROJECT STRUCTURE
+-----------------------------------------------------------
+bank-churn-app/
+├── backend/
+│   ├── main.py             (FastAPI entry point)
+│   ├── model.pkl           (Pre-trained model, if any)
+│   ├── requirements.txt    (Python dependencies)
+├── frontend/
+│   ├── my-react-app/
+│   │   ├── public/
+│   │   │   ├── sources/
+│   │   │   │   ├── test1.html
+│   │   │   │   ├── test2.html
+│   │   │   │   └── ...
+│   │   ├── src/
+│   │   │   ├── App.js
+│   │   │   ├── App.css
+│   │   │   └── ...
+│   │   ├── package.json
+│   │   └── ...
+└── README.txt (this file)
+
+-----------------------------------------------------------
+3. INSTALLATION & SETUP
+-----------------------------------------------------------
+Prerequisites:
+- Node.js (v14 or higher)
+- Python 3.7+ and pip (or conda)
+
+Steps:
+1. Clone the repository:
+   git clone https://github.com/YourUsername/bank-churn-app.git
+
+2. Backend Setup:
+   cd backend
+   pip install -r requirements.txt
+   uvicorn main:app --reload
+   # FastAPI will run on http://127.0.0.1:8000
+
+3. Frontend Setup:
+   cd ../frontend/my-react-app
+   npm install
+   npm start
+   # React app will run on http://localhost:3000
+
+-----------------------------------------------------------
+4. USAGE
+-----------------------------------------------------------
+- Home (Presentation): 
+  Visit http://localhost:3000 (default) to view the "Home" page. 
+  Use the "Previous" and "Next" buttons to cycle through HTML files.
+
+- Predictions:
+  Click the "Predictions" menu item in the sidebar.
+  Fill out the form fields (Credit Score, Age, etc.).
+  Click "Predict" to send data to FastAPI. 
+  The response will indicate if the customer is likely to exit.
+
+- About:
+  Click the "About" menu item to learn more about the churn concept, 
+  why it matters, and how the app predicts churn.
+
+-----------------------------------------------------------
+5. TECHNICAL DETAILS
+-----------------------------------------------------------
+A) React Frontend
+   - Netflix-inspired styling with .css
+   - Auto-resizing iframe using useRef & onLoad (Home page)
+   - Two-column form layout for Predictions
+   - Hero image & info cards on About page
+
+B) FastAPI Backend
+   - main.py contains the /predict endpoint.
+   - Accepts JSON data with fields (creditScore, balance, etc.) 
+     mapped to a pydantic BaseModel (CustomerData).
+   - Loads a pre-trained model (model.pkl) using joblib.
+   - Returns a JSON response: {"will_exit": true/false}
