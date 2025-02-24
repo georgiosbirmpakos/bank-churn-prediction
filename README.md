@@ -107,7 +107,10 @@ npm start
 
 ### 1️⃣ (Optional) Using Docker & Docker Compose
 ```bash
-docker-compose up --build -d
+docker-compose build
+```
+```bash
+docker-compose up -d
 ```
 Check running containers:
 ```bash

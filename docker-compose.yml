@@ -1,0 +1,13 @@
+services:
+  backend:
+    container_name: churn_backend
+    build: ./backend
+    ports:
+      - "8000:8000"
+  frontend:
+    container_name: churn_frontend
+    build: ./frontend/my-react-app
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
