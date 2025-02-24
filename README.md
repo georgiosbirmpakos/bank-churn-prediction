@@ -13,10 +13,12 @@ This is a **Bank Churn Prediction** system that uses a **React** frontend (Netfl
 ```bash
 bank-churn-app/
 ├── backend/              # FastAPI application
+│   ├── Dockerfile          
 │   ├── main.py           # FastAPI entry point
 │   ├── model.pkl         # Pre-trained model (example)
 │   ├── requirements.txt  # Python dependencies
 ├── frontend/
+│   ├── Dockerfile          
 │   ├── my-react-app/
 │   │   ├── public/
 │   │   │   ├── sources/  # HTML files displayed by the React app
